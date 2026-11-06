@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+body {
+  background-color: #f7f9f8;
+  color: #334e48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c4a43;
+  margin-bottom: 1.8rem;
+}
+
+/* 입력 양식 */
+.input-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  color: #5a736e;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e0e7e5;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #2c4a43;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #fafcfc;
+}
+
+input[type="text"]:focus {
+  border-color: #88b0a4;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(136, 176, 164, 0.15);
+}
+
+button {
+  width: 100%;
+  padding: 0.85rem;
+  margin-top: 0.8rem;
+  background-color: #88b0a4;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #769f93;
+}
+
+/* 결과 텍스트 */
+.result-text {
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.result-text span {
+  font-weight: 700;
+}
+
+/* 숨김 상태 클래스 */
+.hidden {
+  display: none;
+}
+
+/* BMI 바 그래프 컨테이너 */
+.gauge-container {
+  margin-top: 1.5rem;
+  position: relative;
+  width: 100%;
+}
+
+/* 화살표 지표 */
+.arrow {
+  position: absolute;
+  top: -22px;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #000;
+  transition: left 0.4s ease-in-out;
+}
+
+/* 6단계 막대 바 */
+.bar-wrapper {
+  display: flex;
+  height: 38px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* 색상 설정 (이미지 색상 반영) */
+.step1 { background-color: #4a90e2; } /* 저체중 */
+.step2 { background-color: #52a335; } /* 정상 */
+.step3 { background-color: #b58d28; } /* 비만전단계 */
+.step4 { background-color: #e55656; } /* 1단계 비만 */
+.step5 { background-color: #9b51e0; } /* 2단계 비만 */
+.step6 { background-color: #4444bc; } /* 3단계 비만 */
+
+/* 하단 눈금 레이블 */
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #777;
+  padding: 0 2px;
+}
